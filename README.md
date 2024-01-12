@@ -86,9 +86,8 @@ However, cookies are vulnerable to a type of attack known as cross-site request 
 
 To help prevent CSRF attacks, the SameSite flag was introduced for cookies. When this flag is set, cookies are not sent with cross-site requests, which makes it much more difficult for attackers to perform a CSRF attack.
 
-![image](https://github.com/ady619/react-interview-questions-India/assets/4849117/a090b019-44a3-4500-8318-02cb7a1c55b4)
-
 Some older browsers still don’t support the SameSite flag. For an additional step to countering CSRF, we can include a token (e.g. X-CSRF-TOKEN) with every HTTP request. This helps to ensure that the request is being made by the intended user and not an attacker. By using both the SameSite flag and a token, you can help to protect your web app from CSRF attacks and keep your users’ data safe.
+
 
 **TO THE NEW**
 optional chaining
@@ -97,4 +96,7 @@ localStorage, sessionStorage, cookies limitations
 event.stopPropagation vs event.preventDefault()
 flatten a nested object
 Undefined + 10
+![image](https://github.com/ady619/react-interview-questions-India/assets/4849117/897be6c8-b774-4cc6-8b39-301f9d7dc693)
+
+
 
