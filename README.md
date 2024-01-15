@@ -12,12 +12,16 @@ React JS Interview Questions mainly asked by Indian Interviewers
 <a name="1"></a>
 **1. What are the different storage mechanism in browsers**
 
-  Three different storage mechanisms exist for the web browser: 
-  a) localStorage,
+  Three different storage mechanisms exist for the web browser:
+  
+  a) localStorage
+  
   b) sessionStorage
+  
   c) cookies.
 
-  **localStorage**
+  ### localStorage
+  
   localStorage is storage data that is only stored in the browser where:
     Stored data is persistent. This means this data remains in the browser’s memory even if the user refreshes the web page or closes and reopens the browser window.
     Stored data is only accessible through client-side JavaScript and cannot be accessed by the server.
@@ -27,7 +31,8 @@ React JS Interview Questions mainly asked by Indian Interviewers
   
   If we were to refresh the web page, close and reopen the tab, close and reopen the browser, or even restart our computer, the data remains! The only way to delete this data is to either clear our browser’s memory or explicitly delete the localStorage data with the removeItem() or clear() function.
 
-**sessionStorage**
+### sessionStorage
+
   sessionStorage behaves similarly to localStorage in that the data stored with it is only accessible through client-side JavaScript and is not automatically sent to the server with every HTTP request. However, sessionStorage has one key difference: the data stored with it is automatically deleted when the user closes the browser tab or window where the data was stored.
   
       sessionStorage.setItem("greeting", "Hello World!");
@@ -36,7 +41,8 @@ React JS Interview Questions mainly asked by Indian Interviewers
   
   Alternatively, like localStorage, data can also be deleted by clearing out the browser’s memory or with the removeItem() and clear() functions:
 
-**Cookies**
+### Cookies
+
   Cookies are another form of data that can be stored in the browser. Some key properties of cookies include:
   
   Persistence. The data stored in cookies is persistent, which means it will remain in the browser even if the user refreshes the web page or closes and reopens the browser window.
@@ -44,7 +50,7 @@ React JS Interview Questions mainly asked by Indian Interviewers
   Automatic transmission. Unlike localStorage or sessionStorage, the data stored in cookies is automatically sent to the server with every HTTP request.
   Cookies, like localStorage, are persistent in memory. If we were to refresh the web-page or close and re-launch the browser window (or tab), the data stored in cookies will not be deleted. However, cookie data can be deleted if we were to explicitly clear browser memory or the cookie happens to reach its expiration date.
 
-localStorage & sessionStorage Security
+### localStorage & sessionStorage Security
   Both localStorage and sessionStorage are accessible through JavaScript running in the browser. This means that any data stored in these types of storage, such as authentication data, is vulnerable to cross-site scripting (XSS) attacks. In a XSS attack, an attacker can inject client-side scripts, such as JavaScript, into a web app in order to gain access to sensitive information.
   
   There are some steps we can take to prevent XSS attacks.
@@ -53,7 +59,7 @@ localStorage & sessionStorage Security
   We can escape untrusted data. This is often done automatically when using a modern front-end framework like React.
   However, when it comes to storing sensitive data in the browser, cookies are better suited for storing sensitive data than localStorage or sessionStorage.
 
-Cookie Security
+### Cookie Security
   Cookies can be marked as HttpOnly and thus can only be accessed by the server and not by JavaScript running in the browser. This make cookies immune to XSS attacks. We can also set a Secure flag to a cookie to guarantee the cookie is only sent over HTTPS. These are some of the reasons why cookies are often used to store sensitive tokens or session data.
   
   However, cookies are vulnerable to a type of attack known as cross-site request forgery (CSRF). In a CSRF attack, an attacker lures a victim to a malicious website or email, which causes the victim’s web browser to perform an unwanted HTTP request to another website where the victim is currently authenticated. This exploit of how the browser handles cookies can allow the attacker to gain access to sensitive information.
