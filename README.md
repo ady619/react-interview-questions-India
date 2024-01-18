@@ -76,7 +76,33 @@ localStorage, sessionStorage, cookies limitations
 event.stopPropagation vs event.preventDefault()
 flatten a nested object
 Undefined + 10
-![image](https://github.com/ady619/react-interview-questions-India/assets/4849117/897be6c8-b774-4cc6-8b39-301f9d7dc693)
+
+**EY**
+Promises vs Callback
+write promise code
+Write code to fetch data from server.
+
+    const myPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("foo");
+      }, 300);
+    });
+
+    import React from 'react'
+    export default function App() {
+    
+    let handleClick = async ()=>{
+      const response = await fetch("https://dog.ceo/api/breeds/image/random")
+      const data = await response.json()
+      console.log(data)
+    }
+    
+      return (
+        <div>
+          <button onClick={()=>handleClick()}>Click me</button>
+        </div>
+      );
+    }
 
 
 
