@@ -68,6 +68,7 @@ React JS Interview Questions mainly asked by Indian Interviewers
   
   Some older browsers still don’t support the SameSite flag. For an additional step to countering CSRF, we can include a token (e.g. X-CSRF-TOKEN) with every HTTP request. This helps to ensure that the request is being made by the intended user and not an attacker. By using both the SameSite flag and a token, you can help to protect your web app from CSRF attacks and keep your users’ data safe.
 
+.
 
 **TO THE NEW**
 optional chaining
@@ -77,10 +78,16 @@ event.stopPropagation vs event.preventDefault()
 flatten a nested object
 Undefined + 10
 
+ .
+
 **EY**
+
 Promises vs Callback
+
 write promise code
+
 Write code to fetch data from server.
+
 
     const myPromise = new Promise((resolve, reject) => {
       setTimeout(() => {
