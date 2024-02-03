@@ -8,6 +8,107 @@ React JS Interview Questions mainly asked by Indian Interviewers
 | No. | Questions                                                                                                    |
 | --- | ------------------------------------------------------------------------------------------------------------ |
 | 1   | [What are the different storage mechanism in browsers?](#1)      |
+ToTheNew: (15-jan)
+optional chaining
+seo in react
+ localStorage, sessionStorage, cookies limitations
+event.stopPropagation vs event.preventDefault()
+flatten a nested object 
+
+EY: (18-jan)
+Promises vs Callback
+write promise code
+Write code to fetch data from server.
+
+Unifytech: (19-jan)
+lifecycle of react-native navigation
+getSnapshotBeforeUpdate() use cases
+oops concept in android development
+storage in react native
+weakmap use cases
+design patterns in React Native development.
+write code for:
+closure
+longest increasing sequence
+
+Iris Software:(26-Jan)
+javascript datatypes of NaN, null, array
+css div vs span
+box model
+
+
+Publicis Sapient: (27-jan)
+Software development steps
+microservices architecture
+React JS
+TDD approach
+huskey, prettier, linting
+Github checks
+
+Infinite Computer Solutions: (29-jan)
+why redux loose data on page refresh
+react reconciltion
+what is the output of below codes in react component
+1.
+const [abc, setAbc] = useState(0)
+useEffect(()=>{
+setAbc(10)
+console.log(abc)
+},[])
+
+2.
+const [abc, setAbc] = useState(0)
+useEffect(()=>{
+setAbc(10)
+console.log(abc)
+},[abc])
+
+3.
+const [abc, setAbc] = useState(0)
+useEffect(()=>{
+setAbc(10)
+console.log(abc)
+})
+
+4.
+const [abc, setAbc] = useState(0)
+useEffect(()=>{
+console.log(abc)
+},[abc])
+ 
+for (let i=0; i<1000;i++){
+setAbc(i)
+}
+
+Iris Software[2nd Round(Manager)]: (30-Jan) 
+Professional journey
+
+Pratham:
+3 api calls one after another. correct approach.
+what should we do while waiting for the data if it's around 10 sec.
+how to use variables in CSS
+scss
+webpack configuration
+publish npm packages
+semantic elements
+react vs angular
+how unidirectional data flow helps
+how using virtual dom is faster
+can we use multiple redux stores in react app.
+
+Pratham2: (02-Feb)
+CDN (#cdn)
+architectural diagram
+appliaction takes time to load. fix it
+how to debug performance issue
+performance bottle necks you faced
+security in react appliaction
+Web components
+pointers to check in code reviews
+pointers to check while driving sprint planning, giving story points.
+pixel perfect design.
+reusable UI components
+design pattern in your project.
 
 <a name="1"></a>
 **1. What are the different storage mechanism in browsers**
@@ -68,48 +169,12 @@ React JS Interview Questions mainly asked by Indian Interviewers
   
   Some older browsers still don’t support the SameSite flag. For an additional step to countering CSRF, we can include a token (e.g. X-CSRF-TOKEN) with every HTTP request. This helps to ensure that the request is being made by the intended user and not an attacker. By using both the SameSite flag and a token, you can help to protect your web app from CSRF attacks and keep your users’ data safe.
 
-.
+<a name="cdn"></a>
+## What Is a CDN ?
+A content delivery network (CDN) is a group of geographically distributed servers that speed up the delivery of web content by bringing it closer to where users are.
 
-**TO THE NEW**
-optional chaining
-seo in react
-localStorage, sessionStorage, cookies limitations
-event.stopPropagation vs event.preventDefault()
-flatten a nested object
-Undefined + 10
+CDNs rely on a process called “caching” that temporarily stores copies of files in data centers across the globe, allowing you to access internet content from a server near you. Content delivered from a server closest to you reduces page load times and results in a faster, high-performance web experience. By caching content like web pages, images, and video in servers near your physical location, CDNs allow you to do things like watch a movie, download software, check your bank balance, post on social media, or make purchases without having to wait for content to load.
 
- .
-
-**EY**
-
-Promises vs Callback
-
-write promise code
-
-Write code to fetch data from server.
-
-
-    const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("foo");
-      }, 300);
-    });
-
-    import React from 'react'
-    export default function App() {
-    
-    let handleClick = async ()=>{
-      const response = await fetch("https://dog.ceo/api/breeds/image/random")
-      const data = await response.json()
-      console.log(data)
-    }
-    
-      return (
-        <div>
-          <button onClick={()=>handleClick()}>Click me</button>
-        </div>
-      );
-    }
 
 
 
