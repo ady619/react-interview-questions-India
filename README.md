@@ -97,7 +97,7 @@ how using virtual dom is faster
 can we use multiple redux stores in react app.
 
 Pratham2: (02-Feb)
-CDN (#cdn)
+[CDN] (#cdn)
 architectural diagram
 appliaction takes time to load. fix it
 how to debug performance issue
